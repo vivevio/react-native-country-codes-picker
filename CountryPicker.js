@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import { FlatList, TextInput, Keyboard, Easing, TouchableOpacity, View, Text, Animated, Dimensions, KeyboardAvoidingView } from 'react-native';
+import { FlatList, TextInput, Keyboard, Easing, TouchableOpacity, View, Text, Animated, Dimensions } from 'react-native';
 import {countryCodes} from "./constants/countryCodes";
 import {useKeyboardStatus} from "./helpers/useKeyboardStatus";
 import {CountryButton} from "./components/CountryButton";
@@ -105,6 +105,7 @@ export const CountryPicker = ({show, setClose, pickerButtonOnPress, onBackdropCl
                         value={searchValue}
                         onChangeText={(text) => setSearchValue(text)}
                         placeholder={'Search your country'}
+                        placeholderTextColor="#9A9A9A"
                     />
                 </Animated.View>
                 <TouchableOpacity
@@ -123,7 +124,6 @@ export const CountryPicker = ({show, setClose, pickerButtonOnPress, onBackdropCl
                             color: '#42a5f5',
                             fontSize: 15,
                             width: 65,
-                            top: 3,
                         }}
                     >
                         Cancel
